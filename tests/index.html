@@ -1,0 +1,24 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf8" />
+		<title>UX Rocket ShortCode</title>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="../src/uxrocket.shortcodes.js"></script>
+		<script>
+			uxshortcode.addCommand('CTRL ALT T', function(){
+				console.log('Command starting with CTRL ALT');
+			});
+			
+			uxshortcode.addCommand('ALT SHIFT T', function(){
+				console.log('Command starting with ALT SHIFT');
+			});
+			
+			uxshortcode.addCommand('CTRL SHIFT T', function(){
+				console.log('Command starting with CTRL SHIFT');
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

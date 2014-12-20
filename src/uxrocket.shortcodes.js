@@ -9,9 +9,6 @@
 (function(window, document) {
     var _settings = {
         keymap: {
-            "SHIFT"   : 16,
-            "CTRL"    : 17,
-            "ALT"     : 18,
             "keys"    : {
                 "0": 48,
                 "1": 49,
@@ -117,16 +114,18 @@
     };
 
     var _this = {
-		version: "0.1.0",
+		version: "0.2.0",
 				
         addCommand: function(keys, callback) {
             var keyStack = keys.split(' '),
                 commandType = _settings.commandType(keys);
 
-            // normal keys
-            _settings.commands[commandType][_settings.keymap.keys[keyStack[keyStack.length - 1]]] = callback;
-            // shift keys
-            _settings.commands[commandType][_settings.keymap.keys_alt[keyStack[keyStack.length - 1]]] = callback;
+            if(commandType == 'AS'){
+            	_settings.commands[commandType][_settings.keymap.keys_alt[keyStack[keyStack.length - 1]]] = callback; 
+				return;         
+            }
+			
+			_settings.commands[commandType][_settings.keymap.keys[keyStack[keyStack.length - 1]]] = callback;
         },
 
         removeCommand: function(keys) {
@@ -153,11 +152,11 @@
                 commandType = 'CS';
             }
 
-            if(_settings.commands[commandType][e.keyCode] != 'undefined') {
+            if(commandType && typeof _settings.commands[commandType][e.keyCode] != 'undefined') {
                 callback_fn = _settings.commands[commandType][e.keyCode];
             }
 
-            if(callback_fn !== false) {
+            if(callback_fn) {
                 _this.callback(callback_fn);
             }
         },
@@ -194,6 +193,11 @@
 	
 	if (typeof define === 'function' && define.amd) {
 		define(uxshortcode);
+	}
+	
+	// jQuery registry for UX Rocket
+	if(typeof jQuery === 'function'){
+		$.uxshortcode = window.uxshortcode;
 	}
 }(window, document));
 
