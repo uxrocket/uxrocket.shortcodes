@@ -197,7 +197,7 @@
 	
 	// jQuery registry for UX Rocket
 	if(typeof jQuery === 'function'){
-		$.uxshortcode = window.uxshortcode;
+		jQuery.uxshortcode = window.uxshortcode;
 	}
 }(window, document));
 
