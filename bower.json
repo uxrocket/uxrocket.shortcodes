@@ -1,0 +1,27 @@
+{
+  "name": "uxrocket.shortcodes",
+  "version": "0.2.0",
+  "homepage": "https://github.com/uxrocket/uxrocket.shortcodes",
+  "authors": [
+    "Bilal Çınarlı <bcinarli@gmail.com>"
+  ],
+  "description": "Keyboard short command definitions at ease",
+  "main": "src/uxrocket.shortcodes.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "keyboard",
+    "jQuery",
+    "amd",
+    "shortcodes"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

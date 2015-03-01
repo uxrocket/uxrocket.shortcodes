@@ -13,7 +13,7 @@ ShortCode has not depended any library. You can easily add the script to your pa
 Defining a new keyboard command
 
 ```JavaScript
-uxshortcode.addCommand('CTRL ALT T', function() { // your callback command });
+uxshortcode.addCommand('CTRL ALT T', function() { /* your callback command */ });
 ```
 
 Removing a command

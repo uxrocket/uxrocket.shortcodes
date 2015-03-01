@@ -1,0 +1,29 @@
+{
+  "name": "uxrocket.shortcodes",
+  "version": "0.2.0",
+  "description": "Keyboard short command definitions at ease",
+  "main": "src/uxrocket.shortcodes.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uxrocket/uxrocket.shortcodes.git"
+  },
+  "keywords": [
+    "keyboard",
+    "jQuery",
+    "amd",
+    "shortcodes"
+  ],
+  "author": "Bilal Cinarli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uxrocket/uxrocket.shortcodes/issues"
+  },
+  "homepage": "https://github.com/uxrocket/uxrocket.shortcodes"
+}
